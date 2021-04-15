@@ -1,0 +1,72 @@
+.donut-chart {
+  font-family: Roboto sans-serif;
+  margin: 50px auto;
+  position: relative;
+  width: 550px;
+}
+.donut-chart .recharts-wrapper {
+  margin: 0px auto;
+}
+
+.donut-chart .donut-legend {
+  width: 400px;
+  margin: 20px auto 20px;
+}
+.donut-chart .legend-symbol {
+  width: 22px;
+  margin-right: 12px;
+  height: 18px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.donut-chart .legend-block {
+  padding: 10px 0px;
+  display: flex;
+}
+
+.donut-chart .legend-text {
+  text-align: left;
+  margin: 0px 12px;
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.donut-details {
+  width: 192px;
+  position: absolute;
+  height: 192px;
+  background: #999191;
+  border-radius: 50%;
+  top: 74px;
+  left: 179px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donut-details .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000000;
+  max-width: 215px;
+  font-style: normal;
+  max-height: 180px;
+}
+
+.donut-details span {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.donut-details p {
+  font-size: 15px;
+  margin: 5px 15px;
+}
