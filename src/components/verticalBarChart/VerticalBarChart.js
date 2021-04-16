@@ -34,7 +34,7 @@ const VerticalBarChart = (props) => {
 
   return (
     <div className="vertical-bar-chart">
-      <BarChart {...verticalBarChartConfig}>
+      <BarChart {...verticalBarChartConfig} data={data}>
         {data.map((item, index) => (
           <Bar
             dataKey={`dataSet${index + 1}`}
