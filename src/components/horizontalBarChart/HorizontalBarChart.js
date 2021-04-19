@@ -12,7 +12,7 @@ const HorizontalBarChart = (props) => {
       : [];
 
   return (
-    <div className="vertical-bar-chart">
+    <div className="horizontal-bar-chart">
       <BarChart {...horizontalBarChartConfig} data={data}>
         <XAxis type="number" hide />{" "}
         <YAxis dataKey="name" type="category" hide />
@@ -20,6 +20,8 @@ const HorizontalBarChart = (props) => {
           return (
             <Bar
               dataKey={item}
+              stroke="black"
+              strokeWidth="0.1%"
               stackId="bar-chart"
               key={item}
               fill={colorScale[index]}
