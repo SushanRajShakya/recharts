@@ -4,10 +4,12 @@ import "./assets/donut-wrapper.css";
 
 import DonutChart from "./components/donutChart";
 import DONUT_CHART_DATA from "./mocks/donut-chart";
-import VerticalBarChart from "./components/verticalBarChart";
-import HorizontalBarChart from "./components/horizontalBarChart";
-import * as horizontalBarChart from "./mocks/horizontal-bar-chart";
+import VerticalStackBar from "./components/verticalStackBar";
+import HorizontalStackBar from "./components/horizontalStackBar";
+import * as horizontalStackBarData from "./mocks/horizontal-stack-bar";
+import * as horizontalBarChartData from "./mocks/horizontal-bar-chart";
 import BAR_CHART_DATA, { BAR_CHART_COLORSCALE } from "./mocks/bar-chart";
+import HorizontalBarChart from "./components/horizontalBarChart/HorizontalBarChart";
 
 function App() {
   return (
@@ -19,17 +21,21 @@ function App() {
       <hr />
       <br />
       <br />
-      <VerticalBarChart
+      <VerticalStackBar
         data={BAR_CHART_DATA}
         colorScale={BAR_CHART_COLORSCALE}
       />
       <hr />
       <br />
       <br />
-      <HorizontalBarChart
-        data={horizontalBarChart.BAR_CHART_DATA}
-        colorScale={horizontalBarChart.BAR_CHART_COLORSCALE}
+      <HorizontalStackBar
+        data={horizontalStackBarData.BAR_CHART_DATA}
+        colorScale={horizontalStackBarData.BAR_CHART_COLORSCALE}
       />
+      <hr />
+      <br />
+      <br />
+      <HorizontalBarChart data={horizontalBarChartData.DATA} />
     </div>
   );
 }

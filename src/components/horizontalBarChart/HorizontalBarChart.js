@@ -1,42 +1,25 @@
 import React from "react";
-import { Bar, BarChart, LabelList, XAxis, YAxis } from "recharts";
-
-import { DEFAULT_LABELS } from "../../mocks/horizontal-bar-chart";
-import { horizontalBarChartConfig } from "../../config/horizontalBarChartConfig";
+import { Bar, BarChart, XAxis, YAxis } from "recharts";
 
 const HorizontalBarChart = (props) => {
-  const { data, colorScale } = props;
-  const keys =
-    data && data.length
-      ? Object.keys(data[0]).filter((item) => item.includes("dataSet"))
-      : [];
+  const { data } = props;
+  console.log(data)
 
   return (
-    <div className="horizontal-bar-chart">
-      <BarChart {...horizontalBarChartConfig} data={data}>
-        <XAxis type="number" hide />{" "}
-        <YAxis dataKey="name" type="category" hide />
-        {keys.map((item, index) => {
-          return (
-            <Bar
-              dataKey={item}
-              stroke="black"
-              strokeWidth="0.1%"
-              stackId="bar-chart"
-              key={item}
-              fill={colorScale[index]}
-            >
-              <LabelList
-                offset={40}
-                valueAccessor={() => DEFAULT_LABELS[index]}
-                position="top"
-              />
-              <LabelList dataKey={item} position="top" offset={15} />
-            </Bar>
-          );
-        })}
-      </BarChart>
-    </div>
+    <BarChart
+      width={500}
+      height={300}
+      data={data}
+      margin={{
+        top: 5,
+        right: 30,
+        left: 20,
+        bottom: 5,
+      }}
+    >
+      <XAxis type="number" /> <YAxis dataKey="name" type="category" />
+      <Bar dataKey="value" fill="#8884d8" />
+    </BarChart>
   );
 };
 

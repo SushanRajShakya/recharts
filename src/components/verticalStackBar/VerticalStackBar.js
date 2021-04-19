@@ -29,7 +29,7 @@ const _getBarLabel = (dataSetKey, labelIndex, accessorData) => {
   return dataSet ? `${dataSet} ${label}` : "";
 };
 
-const VerticalBarChart = (props) => {
+const VerticalStackBar = (props) => {
   const { data, colorScale } = props;
   const keys =
     data && data.length
@@ -66,4 +66,4 @@ const VerticalBarChart = (props) => {
   );
 };
 
-export default VerticalBarChart;
+export default VerticalStackBar;
