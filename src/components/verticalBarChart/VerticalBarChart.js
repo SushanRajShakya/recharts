@@ -31,20 +31,24 @@ const _getBarLabel = (dataSetKey, labelIndex, accessorData) => {
 
 const VerticalBarChart = (props) => {
   const { data, colorScale } = props;
+  const keys =
+    data && data.length
+      ? Object.keys(data[0]).filter((item) => item.includes("dataSet"))
+      : [];
 
   return (
     <div className="vertical-bar-chart">
       <BarChart {...verticalBarChartConfig} data={data}>
-        {data.map((item, index) => (
+        {keys.map((item, index) => (
           <Bar
-            dataKey={`dataSet${index + 1}`}
+            dataKey={item}
             stackId="bar-chart"
-            key={`dataSet${index + 1}`}
+            key={item}
             fill={colorScale[index].background}
           >
             <LabelList
               valueAccessor={(accessorData) =>
-                _getBarLabel(`dataSet${index + 1}`, index, accessorData)
+                _getBarLabel(item, index, accessorData)
               }
               position="center"
               fill={colorScale[index].textColor}

@@ -37,8 +37,6 @@ const BAR_CHART_DATA = [
     name: "120 Total Today",
     title: "120+",
     dataSet1: 120,
-    dataSet2: 0,
-    dataSet3: 0,
     labels: BAD_LABEL,
   },
 ];
