@@ -10,6 +10,7 @@ import * as horizontalStackBarData from "./mocks/horizontal-stack-bar";
 import * as horizontalBarChartData from "./mocks/horizontal-bar-chart";
 import BAR_CHART_DATA, { BAR_CHART_COLORSCALE } from "./mocks/bar-chart";
 import HorizontalBarChart from "./components/horizontalBarChart/HorizontalBarChart";
+import HorizontalLineChart from "./components/horizontalLineChart/HorizontalLineChart";
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
       <br />
       <br />
       <HorizontalBarChart data={horizontalBarChartData.DATA} />
+      <hr />
+      <br />
+      <br />
+      <HorizontalLineChart />
     </div>
   );
 }
