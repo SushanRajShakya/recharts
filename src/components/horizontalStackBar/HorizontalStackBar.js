@@ -13,7 +13,7 @@ const HorizontalStackBar = (props) => {
       : [];
 
   return (
-    <div className="horizontal-bar-chart">
+    <div className="horizontal-stack-bar">
       <BarChart {...horizontalBarChartConfig} data={data}>
         <XAxis type="number" hide />{" "}
         <YAxis dataKey="name" type="category" hide />

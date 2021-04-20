@@ -1,25 +1,32 @@
 import React from "react";
-import { Bar, BarChart, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, LabelList, Text, XAxis, YAxis } from "recharts";
 
 const HorizontalBarChart = (props) => {
   const { data } = props;
-  console.log(data)
 
   return (
-    <BarChart
-      width={500}
-      height={300}
-      data={data}
-      margin={{
-        top: 5,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <XAxis type="number" /> <YAxis dataKey="name" type="category" />
-      <Bar dataKey="value" fill="#8884d8" />
-    </BarChart>
+    <div className="horizontal-bar-chart">
+      <BarChart
+        layout="vertical"
+        width={700}
+        height={700}
+        data={data}
+        barCategoryGap="30%"
+        margin={{
+          top: 100,
+          right: 40,
+          left: 150,
+          bottom: 100,
+        }}
+      >
+        <XAxis type="number" domain={[0, 160]} />
+        <YAxis type="category" tick={false} />
+        {/* <YAxis type="category" tickSize={0} tickMargin={20} dataKey={"name"} /> */}
+        <Bar dataKey="value" fill="#7F8A86">
+          <LabelList dataKey={"name"} position="left" offset={15} width={150} />
+        </Bar>
+      </BarChart>
+    </div>
   );
 };
 

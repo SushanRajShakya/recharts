@@ -1,6 +1,6 @@
 export const DATA = [
   {
-    name: "# of Registarations Confirmed",
+    name: "# of Registrations Confirmed",
     value: 120,
   },
   {
@@ -20,7 +20,7 @@ export const DATA = [
     value: 60,
   },
   {
-    name: "# Dealers who need followed up ( 2 weeks )",
+    name: "# Dealers who need follow up ( 2 weeks )",
     value: 60,
   },
 ];
